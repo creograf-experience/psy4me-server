@@ -1,0 +1,44 @@
+Получить консультации клиента
+  GET /api/private/client/consultations
+  returns: {
+    consultations: [
+      {...},
+      {...}
+    ]
+  }
+
+Создать консультацию
+  POST /api/private/client/consultations
+  body: {
+    psych: id психолога,
+    client: id клиента,
+    date: дата консультации в миллисекундах,
+    durationInMinutes: время консультации в минутах (60, 90)
+  }
+
+Перенести консультацию
+  PUT /api/private/client/consultations
+  body: {
+    id: id консультации,
+    date: новая дата в миллисекундах
+  }
+
+Принять перенос консультации
+  PUT /api/private/client/consultations/accept-reschedule
+  body: {
+    id: id консультации
+  }
+
+Завершить консультацию
+  PUT /api/private/client/consultations/complete
+  body: {
+    id: id консультации
+  }
+
+Оценить консультацию
+  PUT /api/private/client/consultations/rate
+  body: {
+    id: id консультации,
+    psychRating: оценка психолога (число от 1 до 5),
+    connectionRating: оценка связи (число от 1 до 5)
+  }

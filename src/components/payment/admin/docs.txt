@@ -1,0 +1,18 @@
+Получить платежи
+  POST /api/private/admin/payments/filter
+  body: {
+      str: фамилия или почта или телефон
+      paymentOptions = 'sber, aquiring...',
+      paymentStatus: 'оплачено, отменено...'
+      from: с такого то времени
+      to: по такое то время
+      page: номер страницы
+      size: колличество на странице
+    }
+  returns: {
+    data: {
+        payments: [],
+        totalCount:
+        totalPages
+       }
+  }

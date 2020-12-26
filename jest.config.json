@@ -1,0 +1,21 @@
+{
+  "testRegex": "((\\.|/*.)(test))\\.js?$",
+  "preset": "@shelf/jest-mongodb",
+  "testTimeout": 30000,
+  "collectCoverageFrom": [
+    "**/*.js",
+    "!**/eslint-plugin-control/**",
+    "!**/node_modules/**",
+    "!**/coverage/**",
+    "!webpack.config.js"
+  ],
+  "moduleNameMapper": {
+    "^.+\\.(scss)$": "<rootDir>/__mocks__/styleMock.js"
+  },
+  "moduleDirectories": [
+    "node_modules"
+  ],
+  "modulePaths": [
+    "<rootDir>"
+  ]
+}

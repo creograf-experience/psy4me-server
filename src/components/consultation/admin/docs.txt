@@ -1,0 +1,51 @@
+Получить консультации юзера (клиента или психолога)
+  GET /api/private/admin/consultations/:user/:id
+  params: {
+    user: 'psych' или 'client' (обязательно с маленькой буквы)
+    id: id юзера
+  }
+  returns: {
+    consultations: [
+      {...},
+      {...}
+    ]
+  }
+
+Постранично получить косультацию по фамилии психолога или клиента в отрезке времени
+
+  POST /api/private/admin/consultations/filter
+  body: {
+    client: фамилия клиента
+    psych: фамилия психолога
+    from: с такого то времени
+    to: по такое то время
+    page: номер страницы
+    size: колличество на странице
+  }
+  returns: {
+    data: {
+        schedule: [],
+        totalCount:
+        totalPages
+    }
+  }
+
+Изменить консультацию
+  PUT /api/private/admin/consultations
+  body: {
+      psych: id психолога,
+      client: id клиента,
+      date: дата консультации в миллисекундах,
+      durationInMinutes: время консультации в минутах (60, 90)
+      status
+    }
+
+Создать консультацию
+  POST /api/private/admin/consultations
+  body: {
+    psych: id психолога,
+    client: id клиента,
+    date: дата консультации в миллисекундах,
+    durationInMinutes: время консультации в минутах (60, 90)
+    status
+  }

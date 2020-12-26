@@ -1,0 +1,47 @@
+{
+  "name": "psy4me-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {
+    "@jest/globals": "^26.1.0",
+    "@shelf/jest-mongodb": "^1.1.5",
+    "jest": "^26.1.0",
+    "eslint": "^5.6.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "nodemon": "^1.18.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "NODE_ENV=prod node src/index.js",
+    "dev": "NODE_ENV=dev nodemon src/index.js "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/creograf/psy4me-server.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/creograf/psy4me-server#readme",
+  "dependencies": {
+    "base64-img": "^1.0.4",
+    "body-parser": "^1.18.3",
+    "cloudpayments": "^4.1.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.16.3",
+    "express-formidable": "^1.2.0",
+    "fs": "0.0.1-security",
+    "jsonwebtoken": "^8.3.0",
+    "moment": "^2.24.0",
+    "mongoose": "^5.9.1",
+    "multer": "^1.4.0",
+    "multiparty": "^4.2.1",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "socket.io": "^2.2.0",
+    "util": "^0.11.1",
+    "uuid": "^3.3.2"
+  }
+}
